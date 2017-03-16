@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>send sms</title>
+    <meta name="google-signin-client_id" content="856128908931-mc9mco9ll0tb1bo92ppsqbg92i7kkrd8.apps.googleusercontent.com">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+	
+</head>
+
+<body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header class="sms-header">
+        <h1>Send text message</h1>
+    </header>
+    <section class="sms-wrapper">
+	    <form id="upload-form" class="form-group sms-form">
+            <h3>Upload new list</h3>
+			<input type="file" name="">
+			<input type="submit" value="Upload"><br><br>
+		</form>
+		<form id="list-picker-form" class="form-group sms-form">
+            <h3>Select list</h3>
+			<select id="list-picker"><br>
+				<option selected="selected" value="" disabled="true">Pick a list</option>
+			</select><br>
+			<input type="submit" value="Select">
+			<a id="delete-list-btn" class="btn">Delete selected list</a>
+		</form>
+        <form id="list-form">
+        	<fieldset id="recipients"></fieldset>
+            <br>
+            <label class="textfield">
+                <input type="text" disabled="true" name="from" value="+46769447513"> <span class="textfield__label">From Number (you can't change this)</span></label>
+            <label class="textfield"><span class="textfield__label">NOTE: <b>Hej *|NAMN|*,</b> will be included in the begining of the message.</span></label>
+            <br>
+            <label class="textfield">
+                <textarea name="message" placeholder="vi skulle uppskatta..."></textarea><span class="textfield__label">Text message</span></label>
+            <br>
+            <button id="send">Send message(s)</button>
+        </form>
+    </section>
+    <footer class="sms-wrapper"></footer>
+    <script src="scripts/vendor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.4/papaparse.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer="defer"></script>
+</body>
+
+</html>
